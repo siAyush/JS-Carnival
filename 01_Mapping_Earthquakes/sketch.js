@@ -1,4 +1,4 @@
-let map;
+let mapimg;
 let zoom = 1;
 let clat = 0;
 let clon = 0;
@@ -8,7 +8,7 @@ let earthquakes;
 
 //  PublicKeyCredential
 function preload() {
-  map = loadImage(
+  mapimg = loadImage(
     "https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/0,0,1,0,0/1024x512?access_token=pk.eyJ1Ijoic2lheXVzaCIsImEiOiJja3BjaW1tbm0xN25uMndxbTc2bGx1YjQ0In0.Ngp1ZLHjeBCTBJmb23fqEA"
   );
   earthquakes = loadStrings(
@@ -35,7 +35,7 @@ function setup() {
   createCanvas(1024, 512);
   translate(width / 2, height / 2);
   imageMode(CENTER);
-  image(map, 0, 0);
+  image(mapimg, 0, 0);
 
   let cx = mercX(clon);
   let cy = mercY(clat);
